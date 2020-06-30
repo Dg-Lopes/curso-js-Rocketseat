@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="app">
+  <input id="nome">
+</div>
+
+<body>
+  
+  <script>
+    var linkElement = document.createElement('a');
+    linkElement.setAttribute('href', 'https://rockeatseat.com.br');
+    linkElement.setAttribute('title', 'Site da Rocktseat');
+
+    var textElement = document.createTextNode('Acessar site da Rockeatseat');
+    //Adiciona um elemento filho (appendChild) no linkElement
+    linkElement.appendChild(textElement);
+
+    var containerElement = document.querySelector('#app')
+    containerElement.appendChild(linkElement);
+
+    //Remove o input
+    var inputElement = document.querySelector('#nome');
+    containerElement.removeChild(inputElement);
+  </script>
+</body>
+
+</html>

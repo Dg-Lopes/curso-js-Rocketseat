@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const esxperiencias = age => {
+      switch (true) {
+        case age >= 0 && age <= 1:
+          console.log(`Você tem ${age} anos de experiência, então você é um: iniciante`);
+          break;
+        case age >= 1 && age <= 3:
+          console.log(`Você tem ${age} anos de experiência, portanto é um: intermediário`);
+          break;
+        case age >= 3 && age <= 6:
+          console.log(`Você tem ${age} anos de experiência, portanto é: Avançado`);
+          break;
+        default:
+          console.log(`Parabéns você tem ${age} anos de experiência, portanto você é um grande "Jedi Master"`);
+          break;
+      }
+    };
+    esxperiencias(1);
+    esxperiencias(3);
+    esxperiencias(6);
+    esxperiencias(10);
+  </script>
+</body>
+
+</html>

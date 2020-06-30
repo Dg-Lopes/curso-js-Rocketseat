@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" name="nome"/>
+    <!--<input type="text" name="nome" id="nome2"/>-->
+    <button class="botao">Adicionar</button>
+  </div>
+
+  <script>
+  //ID:  var inputElement = document.getElementById('nome');
+
+      /*Busca todos os elementos com a TAG input e sempre retorna um vetor
+  input:  var inputElement = document.getElementsByTagName('input')[0];*/
+
+      /*Sempre tambêm vai retornar o vetor, porque a class nunca é unica como o Id
+  Class: var inputElement = document.getElementsByClassName('nome'); */
+
+      /*O query deixa a gente percorrer todo o elemento HTML, falando extamente onde algo se encontra
+    //var inputElement = document.querySelector('body div#app input'); 
+    //Usando [], quando eu uso estou reverenciando uma propriedade naquele elemento
+    //Caso queira retornar todos elementos ex:input utilizamos o querySelectorAll
+    var inputElement = document.querySelector('input[name=nome]'); */
+
+    //console.log(inputElement);
+
+    //Usando onclick no JS
+
+    var inputElement = document.querySelector('input[name=nome]');
+    var btnElement = document.querySelector('button.botao');
+
+    btnElement.onclick = function() {
+      var text = inputElement.value;
+      alert(text)
+    }
+  </script>
+</body>
+</html>
